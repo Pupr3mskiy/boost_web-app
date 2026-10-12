@@ -1,0 +1,87 @@
+{
+  "common": {
+    "ctaCatalog": "Open catalog",
+    "ctaLearn": "How it works",
+    "ctaDetails": "Details",
+    "ctaConfigure": "Configure",
+    "from": "from",
+    "priceOnRequest": "on request",
+    "backendUnavailable": "This feature will become available after the backend is connected.",
+    "draftSaved": "Local draft saved in this browser.",
+    "demoNotice": "Demo content"
+  },
+  "nav": {
+    "about": "About",
+    "catalog": "Catalog",
+    "signIn": "Sign in"
+  },
+  "hero": {
+    "slides": [
+      {
+        "eyebrow": "Overwatch 2 · Competitive",
+        "title": "Competitive rank boost",
+        "subtitle": "We match a booster to your rank, role and region. Transparent pricing and a clear ordering process.",
+        "cta": "Choose a service"
+      },
+      {
+        "eyebrow": "Overwatch 2 · Duo Boost",
+        "title": "Play alongside a strong partner",
+        "subtitle": "Duo format: you play, an experienced booster is next to you. Learn in combat and climb together.",
+        "cta": "Try Duo"
+      },
+      {
+        "eyebrow": "Overwatch 2 · Coaching",
+        "title": "Game review and growth plan",
+        "subtitle": "Coaching for your role and hero pool. Concrete recommendations, not generic tips.",
+        "cta": "Book a session"
+      }
+    ]
+  },
+  "popular": {
+    "title": "Popular services",
+    "subtitle": "Clients usually start here. The full list is in the catalog."
+  },
+  "whyUs": {
+    "title": "Why choose us",
+    "subtitle": "Three principles we build the service on: fast, quality, reliable.",
+    "items": [
+      { "title": "Fast start", "text": "We agree on the terms and start the order without unnecessary delays." },
+      { "title": "Quality matching", "text": "The booster is matched to your rank, role and region — not whoever is free." },
+      { "title": "Reliability & privacy", "text": "Order data is not published; secrets are not stored in the browser or in logs." },
+      { "title": "Transparent pricing", "text": "The calculator shows what the price consists of before you place the order." },
+      { "title": "Clear process", "text": "From choosing parameters to a draft order — a few steps with no hidden terms." },
+      { "title": "Support in touch", "text": "A manager answers questions and agrees on the terms before work starts." }
+    ]
+  },
+  "reviews": {
+    "title": "Reviews",
+    "subtitle": "Below are demo examples. Real reviews will appear after the backend is connected.",
+    "demoLabel": "Demo review",
+    "items": [
+      { "label": "Client · Demo", "text": "Handy calculator: you immediately see what the price is made of." },
+      { "label": "Client · Demo", "text": "I liked that the Duo format was explained before the order, with no hidden conditions." },
+      { "label": "Client · Demo", "text": "Coaching gave a concrete plan for the role — not generic tips." }
+    ]
+  },
+  "contacts": {
+    "title": "Contact us",
+    "subtitle": "Write to us — we will reply in the working channel.",
+    "email": "Email",
+    "telegram": "Telegram",
+    "discord": "Discord"
+  },
+  "footer": {
+    "rights": "© {{year}}. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "faq": "Help / FAQ"
+  },
+  "services": {
+    "competitive": { "title": "Competitive Rank", "text": "Competitive rank increase." },
+    "duo": { "title": "Duo Boost", "text": "Play with a booster." },
+    "placement": { "title": "Placement Matches", "text": "Placement matches." },
+    "coaching": { "title": "Coaching", "text": "Learning and game review." },
+    "wins": { "title": "Wins", "text": "Order wins or improve your winrate." },
+    "individual": { "title": "Individual Request", "text": "Individual request." }
+  }
+}
