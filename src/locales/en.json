@@ -25,15 +25,21 @@
       },
       {
         "eyebrow": "Overwatch 2 · Duo Boost",
-        "title": "Play alongside a strong partner",
+        "title": "Duo-boost",
         "subtitle": "Duo format: you play, an experienced booster is next to you. Learn in combat and climb together.",
         "cta": "Try Duo"
       },
       {
         "eyebrow": "Overwatch 2 · Coaching",
-        "title": "Game review and growth plan",
+        "title": "Coaching",
         "subtitle": "Coaching for your role and hero pool. Concrete recommendations, not generic tips.",
         "cta": "Book a session"
+      }, {
+        "mediaAlt": [
+        "Illustration: competitive rank emblem",
+        "Illustration: duo play — two fighters",
+        "Illustration: holographic game review panel"
+        ]
       }
     ]
   },

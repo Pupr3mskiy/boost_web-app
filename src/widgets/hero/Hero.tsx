@@ -5,7 +5,7 @@ import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Container } from '@/shared/ui/Container';
 import { Button } from '@/shared/ui/Button';
 import { usePrefersReducedMotion } from '@/shared/hooks/usePrefersReducedMotion';
-import { HeroArtwork } from './HeroArtwork';
+import { HeroMedia } from './HeroMedia';
 
 const SLIDE_COUNT = 3;
 const AUTOPLAY_MS = 7000;
@@ -17,12 +17,13 @@ export function Hero() {
   const [paused, setPaused] = useState(false);
   const timerRef = useRef<number | null>(null);
 
-  const slides = t('hero.slides', { returnObjects: true }) as Array<{
+  const rawSlides = t('hero.slides', { returnObjects: true });
+  const slides: Array<{
     eyebrow: string;
     title: string;
     subtitle: string;
     cta: string;
-  }>;
+  }> = Array.isArray(rawSlides) ? rawSlides : [];
 
   const go = useCallback(
     (next: number) => setIndex((next + SLIDE_COUNT) % SLIDE_COUNT),
@@ -30,16 +31,17 @@ export function Hero() {
   );
 
   useEffect(() => {
-    if (reduced || paused) return;
+    if (reduced || paused || slides.length === 0) return;
     timerRef.current = window.setInterval(() => {
       setIndex((i) => (i + 1) % SLIDE_COUNT);
     }, AUTOPLAY_MS);
     return () => {
       if (timerRef.current) window.clearInterval(timerRef.current);
     };
-  }, [reduced, paused]);
+  }, [reduced, paused, slides.length]);
 
-  const current = slides[index];
+  const current = slides[index] ?? slides[0];
+  if (!current) return null;
 
   return (
     <section
@@ -52,7 +54,6 @@ export function Hero() {
       }}
       aria-roledescription="carousel"
     >
-      {/* Декоративный фон */}
       <div className="absolute inset-0 -z-10 bg-grid opacity-60" />
       <div
         className="absolute -top-40 left-1/2 -z-10 h-[520px] w-[900px] -translate-x-1/2 rounded-full blur-3xl"
@@ -65,7 +66,6 @@ export function Hero() {
 
       <Container>
         <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
-          {/* Текст */}
           <div className="lg:col-span-7">
             <div
               key={`eyebrow-${index}`}
@@ -107,7 +107,6 @@ export function Hero() {
               </Link>
             </div>
 
-            {/* Индикаторы + стрелки */}
             <div
               className="animate-fade-up mt-10 flex items-center gap-4"
               style={{ animationDelay: reduced ? '0ms' : '320ms' }}
@@ -147,9 +146,8 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Арт */}
           <div className="lg:col-span-5">
-            <HeroArtwork index={index} reduced={reduced} />
+            <HeroMedia index={index} reduced={reduced} />
           </div>
         </div>
       </Container>
